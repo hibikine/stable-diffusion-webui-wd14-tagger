@@ -15,8 +15,8 @@ from PIL import Image
 
 from modules import shared  # pylint: disable=import-error
 from modules.deepbooru import re_special  # pylint: disable=import-error
-from tagger import format as tags_format  # pylint: disable=import-error
-from tagger import settings  # pylint: disable=import-error
+from . import format as tags_format  # pylint: disable=import-error
+from . import settings  # pylint: disable=import-error
 
 Its = settings.InterrogatorSettings
 

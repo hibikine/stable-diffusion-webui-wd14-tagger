@@ -1,4 +1,5 @@
 """Utility functions for the tagger module"""
+from .preset import Preset  # pylint: disable=import-error
 import os
 
 from typing import List, Dict
@@ -9,10 +10,9 @@ from modules.shared import models_path  # pylint: disable=import-error
 
 default_ddp_path = Path(models_path, 'deepdanbooru')
 default_onnx_path = Path(models_path, 'TaggerOnnx')
-from tagger.preset import Preset  # pylint: disable=import-error
-from tagger.interrogator import Interrogator, DeepDanbooruInterrogator, \
+from .interrogator import Interrogator, DeepDanbooruInterrogator, \
                                 MLDanbooruInterrogator  # pylint: disable=E0401 # noqa: E501
-from tagger.interrogator import WaifuDiffusionInterrogator  # pylint: disable=E0401 # noqa: E501
+from .interrogator import WaifuDiffusionInterrogator  # pylint: disable=E0401 # noqa: E501
 
 preset = Preset(Path(scripts.basedir(), 'presets'))
 
